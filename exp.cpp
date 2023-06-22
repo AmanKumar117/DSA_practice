@@ -9,7 +9,7 @@ struct Job
    int dead;    // Deadline of job
    int profit;  // Profit if job is over before or on deadline
 };
-  
+  //fun()
 // This function is used for sorting all jobs according to profit
 bool comparison(Job a, Job b)
 {
