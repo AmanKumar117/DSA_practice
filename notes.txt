@@ -1,0 +1,118 @@
+05/04/2023-----------------------------------------------------------------------------------------------------------------------
+interfaces - when all methods are to be abstract and when there is need for full abstraction
+abstract class- when limited abstraction is needed
+access specifiers:
+    for class there are only 2:- public and package-private
+    for members 4 access specifiers are there. public, private, protected, or package-private(no explicit modifier).
+
+modifier        class       package     subclass in different package   World
+public          Y           Y           Y                               Y
+protected       Y           Y           Y                               N
+not-specified   Y           Y           N                               N
+private         Y           N           N                               N
+
+example is done using packages mypkg and other
+when methods in TempJ are kept as protected subclass in other package it works, when not specified then subclass in other package cnanot access it.
+-----------------------------------------------------------------------------------------------------------------------------------------
+06/04/2023-------------------------------------------------------------------------------------------------------------------------------
+Exception and errors are different.
+Exception indicates a problem(error) that occurs at run time or compile time.
+unchecked Exceptions are some time called run time Exception, checked Exception are divided in three major divisions like IOException, ClassNotFoundException, SQLException.
+Stack trace;
+try; catch; finally; finally always runs even if no exception occured in try block, whereas catch only runs when exception occurs in try block.
+----------------------------------------------------------------------------------------------------------------------------------------
+07/04/23--------------------------------------------------------------------------------------------------------------------------------
+concurrency: type of parallelism or performing multiple task. Java makes this available to us through language and API.
+two ways of creating threads: by extending thread class; By implementing runnable interface.
+----------------------------------------------------------------------------------------------------------------------------------------
+10/04/23--------------------------------------------------------------------------------------------------------------------------------
+two classes one for odd, one for even in 1 to 100, in driver class use two threads to do this simultaneously/concurrently
+Serializable
+oddeventhread
+----------------------------------------------------------------------------------------------------------------------------------------
+11/04/23--------------------------------------------------------------------------------------------------------------------------------
+progs: Testawt, Swing1
+----------------------------------------------------------------------------------------------------------------------------------------
+12/04/23--------------------------------------------------------------------------------------------------------------------------------
+awt is one of the java foundation class, swing is its improvement.
+----------------------------------------------------------------------------------------------------------------------------------------
+17/04/23--------------------------------------------------------------------------------------------------------------------------------
+Java Beans: A type of reusable software component.
+    They have certain classes and specifications.
+*(we can have main method in every class bcz we can test every class separately)
+- Beans are generally used for GUI. These GUIs can run on desktop, web enterprise apps
+- Encapsulate(methods and data)
+- Persistance(Omnipresent)
+- I/O Serialization
+Specifications:
+    * provides default constructor with no arguments
+    * being serializable interface
+    * public accessor methods and properties
+    * private variables
+- as a component we can run beans anywhere
+- JComponent is a class in swing ,(Q) develop a custome component extends JComponent, define 4 var, x, y, height and width (all private) and write a constructor initialize x and y = 0. geters and seters to be made, method get prefered size.
+1 question on bean, class and objects, access modifier, swing(textfield and other component).
+-to be bean , need to be serializabe, have constructors with no arguments, public methods and private members, seters and geters.
+----------------------------------------------------------------------------------------------------------------------------------------
+19/04/23--------------------------------------------------------------------------------------------------------------------------------
+2 tier and 3 tier apps:
+2 tier: simple client-server based app
+3 tier: includes databases, ex is web based apps, here request goes from client to server and then server fetchs data from database and provides it to the client.
+        GUI/Client          Server          Database
+        GUI made in swing   App logic
+        awt or web tech     Java            Mysql
+API: Application Programming Interface. Provides means to access a program/service through interfaces.
+----------------------------------------------------------------------------------------------------------------------------------------
+21/04/23--------------------------------------------------------------------------------------------------------------------------------
+JDBC
+-Drivers are nothing but pulgins, they provide you with a high level api to the database.
+                                Java App
+                                    |
+                                    V
+                                JDBC Driver Manager
+                                |                   |
+                                V                   V
+                        JDBC, ODBC Bridge   Vendor specific JDBC driver
+                                |                       |
+                                V                       V
+                        Vendor specific ODBC driver    Database
+                                    |
+                                    V
+                                Database
+----------------------------------------------------------------------------------------------------------------------------------------
+01/05/23--------------------------------------------------------------------------------------------------------------------------------
+.jsp --> java server pages (HTML with embedded java code).
+.jsp programs are created as components known as servelets and are processed by our java web server (Apache / Tomcat) also known as servelet servers.
+(windows builder)
+create form for job application or pizza ordering.
+----------------------------------------------------------------------------------------------------------------------------------------
+08/05/23--------------------------------------------------------------------------------------------------------------------------------
+Jakarta Server Pages(formerly Java Server Pages), Java Servlet(aka Jakarta Servlet) are Java web technologies included for ongoing support and upgrade in Jakarta EE.
+Servlet: helps embedd HTML markup code inside java code which helps us connect front-end with application servers. To run this servlet we need web server(container)(Java Application Server).
+JSP: now here we embedd java code in HTML code. JSP is more preferable than servlet as it is faster.
+we can also use both to make a dynamic web pages.
+Presentation layer provided by HTML, CSS, JavaScript.
+Business layer/ logic is provided by Programming language.
+DB layer by server.
+----------------------------------------------------------------------------------------------------------------------------------------
+10/05/23--------------------------------------------------------------------------------------------------------------------------------
+tags of JSP:
+<%@  %> :Directive
+<%= %> :an expression
+<%! %> :Declaration of variable or method
+<% %>  :Scriptlet
+<jsp:actionname %>
+<%--comments--%>
+----------------------------------------------------------------------------------------------------------------------------------------
+module 1
+threads, Exception handeling, interface, abstraction. etc.
+module 2
+java bean development, component using bean.
+module 3
+JDBC , CRUD Operations.
+module 4
+JFC, AWT and Swing forms.
+- GUI (JMenu, JPanel, JTabbedPane, JButton, JTextBoxes, etc)
+module 5
+JSP theory, tags, HTML form with JSP, Simple Servlet, life cycle of Servlet.
+----------------------------------------------------------------------------------------------------------------------------------------
